@@ -11,7 +11,7 @@ namespace Practica_03
         {
         }
 
-        public void precticaHashtableAlumnos()
+        public void practicaHashtableAlumnos()
         {
             this.alta();
             this.alta();

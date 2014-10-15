@@ -11,7 +11,7 @@ namespace Practica_03
         static void Main(string[] args)
         {
             Alumno alumno = new Alumno();
-            alumno.precticaHashtableAlumnos();
+            alumno.practicaHashtableAlumnos();
         }
     }
 }
