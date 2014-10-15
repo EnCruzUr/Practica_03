@@ -40,12 +40,23 @@ namespace Practica_03
         }
         private void editar()
         {
-            //Console.WriteLine("Codigo del alumno que desea Modificar");
-
+            Console.Write("Codigo del alumno que desea Modificar: ");
+            CodigoAlumno = Console.ReadLine();
+            if (BdAlumnos.Contains(CodigoAlumno))
+            {
+                Console.Write("Coloque nuevo nombre: ");
+                NombreAlumno = Console.ReadLine();
+                BdAlumnos[CodigoAlumno] = NombreAlumno;
+                Console.WriteLine("Codigo " + CodigoAlumno + " Se ha cambiado");
+            }
+            else
+            {
+                Console.Write("\nNo Encontrado\n");
+            }
         }
         private void eliminar()
         {
-            Console.WriteLine("Codigo del alumno que desea Eliminar");
+            Console.Write("\nCodigo del alumno que desea Eliminar");
             CodigoAlumno = Console.ReadLine();
             if (BdAlumnos.ContainsKey(CodigoAlumno))
             {
