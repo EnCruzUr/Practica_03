@@ -10,7 +10,8 @@ namespace Practica_03
     {
         static void Main(string[] args)
         {
-
+            Practica_Hashtable hasht = new Practica_Hashtable();
+            hasht.precticaHashtableAlumnos();
         }
     }
 }
