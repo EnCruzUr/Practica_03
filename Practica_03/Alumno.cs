@@ -40,15 +40,14 @@ namespace Practica_03
         }
         private void editar()
         {
+            //Console.WriteLine("Codigo del alumno que desea Modificar");
 
         }
         private void eliminar()
         {
             Console.WriteLine("Codigo del alumno que desea Eliminar");
             CodigoAlumno = Console.ReadLine();
-            BdAlumnos.Remove(CodigoAlumno);
-
-            if (BdAlumnos.ContainsKey("CodigoAlumno"))
+            if (BdAlumnos.ContainsKey(CodigoAlumno))
             {
                 Console.WriteLine("Codigo "+CodigoAlumno+" Eliminado");
             }
@@ -56,6 +55,7 @@ namespace Practica_03
             {
                 Console.Write("Codigo " + CodigoAlumno + " No se ha encontrado");
             }
+            BdAlumnos.Remove(CodigoAlumno);
         }
         private void imprimir()
         {
