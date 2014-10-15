@@ -34,7 +34,7 @@ namespace Practica_03
             }
             catch
             {
-                Console.Write("\nCodigo de alumno repetido\n");
+                Console.Write("\nCodigo de alumno repetido\nUltimo No Agregado!!!\n");
             }
             
         }
@@ -44,11 +44,24 @@ namespace Practica_03
         }
         private void eliminar()
         {
+            Console.WriteLine("Codigo del alumno que desea Eliminar");
+            CodigoAlumno = Console.ReadLine();
+            BdAlumnos.Remove(CodigoAlumno);
 
+            if (BdAlumnos.ContainsKey("CodigoAlumno"))
+            {
+                Console.WriteLine("Codigo "+CodigoAlumno+" Eliminado");
+            }
+            else
+            {
+                Console.Write("Codigo " + CodigoAlumno + " No se ha encontrado");
+            }
         }
         private void imprimir()
         {
-
+            Console.WriteLine("\n   Clave    Nombre");
+            foreach (DictionaryEntry Bd in BdAlumnos)
+                Console.WriteLine("    {0}:    {1}", Bd.Key, Bd.Value);
         }
 
     }
