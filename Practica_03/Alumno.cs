@@ -9,7 +9,9 @@ namespace Practica_03
         private string CodigoAlumno;
         public Alumno()
         {
+
         }
+
         public void practicaHashtableAlumnos()
         {
             this.alta();
